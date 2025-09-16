@@ -17,12 +17,13 @@ app.set("view engine", "ejs"); // va expressga ejs engine ishlatayotganini bildi
 
 // 4 ROUTING CODE
 
-app.get("/hello", function (req, res) {
-  // "/" adress hisoblanadi: localhost:3000/hello yoki /gift
-  res.end(`<h1 style= "background: blue">HELLO WORLD by TINA</h1>`);
+app.post("/create-item", (req, res) => {
+  console.log(req.body);
+  res.json({ test: "success" });
 });
-app.get("/gift", function (req, res) {
-  res.send(`<h1 style= "background: red">siz sovg'alar bo'limidasiz</h1>`);
+
+app.get("/", function (req, res) {
+  res.render("harid");
 });
 
 const server = http.createServer(app);
