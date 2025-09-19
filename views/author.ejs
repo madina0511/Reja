@@ -1,1 +1,301 @@
-<div>Hello World</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    />
+
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <div class="frame">
+      <div class="main_frame">
+        <div class="left_frame">
+          <div class="left_1">
+            <div class="left_1-img">
+              <img src="images/profile.png" alt="" />
+            </div>
+            <div class="left_1_name"><%=user.name%></div>
+            <div class="left_1-p"><%=user.profession%></div>
+            <div class="left_icons">
+              <a class="link_href" href=""
+                ><div class="icon">
+                  <img src="icon/icons-facebook.svg" alt="" /></div
+              ></a>
+              <a class="link_href" href=""
+                ><div class="icon">
+                  <img src="icon/icons-instagram.svg" alt="" /></div
+              ></a>
+              <a class="link_href" href=""
+                ><div class="icon">
+                  <img src="icon/icons-linkedin.svg" alt="" /></div
+              ></a>
+              <a class="link_href" href=""
+                ><div class="icon">
+                  <img src="icon/icons-twitter.svg" alt="" /></div
+              ></a>
+              <a class="link_href" href=""
+                ><div class="icon">
+                  <img src="icon/icons-Youtube.svg" alt="" /></div
+              ></a>
+              <a class="link_href" href=""
+                ><div class="icon">
+                  <img src="icon/icons-dribbble.svg" alt="" /></div
+              ></a>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_2">
+            <div class="left_2_info">
+              <span class="label">Age:</span><%=user.age%>
+            </div>
+            <div class="left_2_info">
+              <span class="label">Residence:</span>
+              <%=user.residence%>
+            </div>
+            <div class="left_2_info">
+              <span class="label">Freelance:</span>
+              <span style="color: #7eb942"><%=user.freelance%></span>
+            </div>
+            <div class="left_2_info">
+              <span class="label">Address:</span>
+              <%=user.address%>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_3">
+            <h3 class="left_frame-h">Languages</h3>
+            <div class="left_3_info">
+              <span class="info_lang"><%=user.languages[0]%></span>
+              <span class="info_per">100%</span>
+            </div>
+            <div class="info_lang_prog">
+              <div class="prog-bar" style="width: 100%"></div>
+            </div>
+            <div class="left_3_info">
+              <span><%=user.languages[1]%></span>
+              <span>80%</span>
+            </div>
+            <div class="info_lang_prog">
+              <div class="prog-bar" style="width: 80%"></div>
+            </div>
+            <div class="left_3_info">
+              <span><%=user.languages[2]%></span>
+              <span>75%</span>
+            </div>
+            <div class="info_lang_prog">
+              <div class="prog-bar" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_4">
+            <h3 class="left_frame-h">Skills</h3>
+            <div class="left_3_info">
+              <span class="info_lang"><%=user.skills[0]%></span>
+              <span class="info_per">90%</span>
+            </div>
+            <div class="info_lang_prog">
+              <div class="prog-bar" style="width: 90%"></div>
+            </div>
+            <div class="left_3_info">
+              <span class="info_lang"><%=user.skills[1]%></span>
+              <span class="info_per">85%</span>
+            </div>
+            <div class="info_lang_prog">
+              <div class="prog-bar" style="width: 85%"></div>
+            </div>
+            <div class="left_3_info">
+              <span class="info_lang"><%=user.skills[2]%></span>
+              <span class="info_per">80%</span>
+            </div>
+            <div class="info_lang_prog">
+              <div class="prog-bar" style="width: 80%"></div>
+            </div>
+            <div class="left_3_info">
+              <span class="info_lang"><%=user.skills[3]%></span>
+              <span class="info_per">75%</span>
+            </div>
+            <div class="info_lang_prog">
+              <div class="prog-bar" style="width: 75%"></div>
+            </div>
+            <div class="left_3_info">
+              <span class="info_lang"><%=user.skills[4]%></span>
+              <span class="info_per">85%</span>
+            </div>
+            <div class="info_lang_prog">
+              <div class="prog-bar" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_5">
+            <h3 class="left_frame-h">Skills</h3>
+            <div class="left_3_info">
+              <img src="icon/extra_skill_icon.svg" alt="" />
+              <span class="info_lang"><%=user.extra_skills[0]%></span>
+            </div>
+            <div class="left_3_info">
+              <img src="icon/extra_skill_icon.svg" alt="" />
+              <span class="info_lang"><%=user.extra_skills[1]%></span>
+            </div>
+            <div class="left_3_info">
+              <img src="icon/extra_skill_icon.svg" alt="" />
+              <span class="info_lang"><%=user.extra_skills[2]%></span>
+            </div>
+            <div class="left_3_info">
+              <img src="icon/extra_skill_icon.svg" alt="" />
+              <span class="info_lang"><%=user.extra_skills[3]%></span>
+            </div>
+            <div class="left_3_info">
+              <img src="icon/extra_skill_icon.svg" alt="" />
+              <span class="info_lang"><%=user.extra_skills[4]%></span>
+            </div>
+          </div>
+          <div class="marginer"></div>
+        </div>
+        <div class="middle_frame">
+          <div class="middle-intro">
+            <div class="middle-intro_left">
+              <h1><%=user.work_place%></h1>
+              <span class="left_about"><%=user.about_me%></span>
+              <button class="middle-intro-btn">
+                <span>HIRE ME</span> <img src="btn_icon/arrow.svg" alt="" />
+              </button>
+            </div>
+            <img class="left_main_img" src="images/main_pro.png" alt="" />
+            <!-- Orqa qatlamdagi ikonlar -->
+            <div class="shapes-back">
+              <img
+                class="shape"
+                src="menu_icon/Ellipse.svg"
+                style="top: 24px; left: 26px"
+                alt=""
+              />
+              <img
+                class="shape"
+                src="menu_icon/Rectangle.svg"
+                style="top: 90px; left: 230px"
+                alt=""
+              />
+              <img
+                class="shape"
+                src="menu_icon/Ellipse.svg"
+                style="top: 45px; right: 26px"
+                alt=""
+              />
+              <img
+                class="shape"
+                src="menu_icon/Rectangle.svg"
+                style="top: 110px; right: 300px"
+                alt=""
+              />
+            </div>
+
+            <!-- Old qatlamdagi ikonlar -->
+            <div class="shapes-front">
+              <img
+                class="shape"
+                src="menu_icon/Polygon 1.svg"
+                style="bottom: 16px; right: 12px"
+                alt=""
+              />
+              <img
+                class="shape"
+                src="menu_icon/Polygon 1.svg"
+                style="bottom: 90px; right: 400px"
+                alt=""
+              />
+              <img
+                class="shape"
+                src="menu_icon/Ellipse.svg"
+                style="bottom: 45px; left: 200px"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="middle_service">
+            <h3>My Services</h3>
+            <span
+              ><%=user.service_desc%>.Amet minim mollit non deserunt ullamco est
+              Velit officia consequat duis enim velit mollit. lorem ipsum
+            </span>
+          </div>
+          <div class="middle_bottom">
+            <div class="bottom_box">
+              <img src="menu_icon/web_coding.svg" alt="" />
+              <h3>Web Development</h3>
+              <span>Blog, E-Commerce</span>
+            </div>
+            <div class="bottom_box">
+              <img src="menu_icon/ux_design.svg" alt="" />
+              <h3>uI/uX design</h3>
+              <span>Mobile app, website design</span>
+            </div>
+            <div class="bottom_box">
+              <img src="menu_icon/Microphone.svg" alt="" />
+              <h3>sound design</h3>
+              <span>Voice Over, Beat Making</span>
+            </div>
+            <div class="bottom_box">
+              <img src="menu_icon/game-development.svg" alt="" />
+              <h3>game designn</h3>
+              <span>Character Design, Props & Objects</span>
+            </div>
+            <div class="bottom_box">
+              <img src="menu_icon/Photographer.svg" alt="" />
+              <h3>photography</h3>
+              <span>portrait, product photography</span>
+            </div>
+            <div class="bottom_box">
+              <h3>Advertising</h3>
+              <span
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                nulla diam in ac dictum a urna viverra morbi.
+              </span>
+              <div class="bottom_order">
+                <a href=""
+                  ><span>ORDER NOW</span>
+                  <img src="menu_icon/order_arrow.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right_frame">
+          <div class="right_frame_top">
+            <img src="right_frame_icon/Contrast.svg" alt="" />
+          </div>
+          <div class="right_frame_bottom">
+            <button class="circle" data-tip="Home">
+              <img src="right_frame_icon/Home.svg" alt="Home" />
+            </button>
+            <button class="circle" data-tip="CV">
+              <img src="right_frame_icon/cv.svg" alt="CV" />
+            </button>
+            <button class="circle" data-tip="File-code">
+              <img src="right_frame_icon/file-code.svg" alt="" />
+            </button>
+            <button class="circle" data-tip="Jobs">
+              <img src="right_frame_icon/bag.svg" alt="" />
+            </button>
+            <button class="circle">
+              <img src="right_frame_icon/Rectangle.svg" alt="" />
+            </button>
+            <button class="circle">
+              <img src="right_frame_icon/Contact.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

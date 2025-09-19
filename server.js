@@ -1,6 +1,7 @@
 console.log("Web Serverni boshlash");
 
 const express = require("express");
+const res = require("express/lib/response");
 const app = express();
 const http = require("http");
 const fs = require("fs");
@@ -33,6 +34,7 @@ app.post("/create-item", (req, res) => {
 
 app.get("/author", (req, res) => {
   res.render("author", { user: user });
+  console.log("men ishladim");
 });
 
 app.get("/", function (req, res) {
@@ -40,7 +42,7 @@ app.get("/", function (req, res) {
 });
 
 const server = http.createServer(app);
-const PORT = 3000;
+let PORT = 3000;
 server.listen(PORT, function () {
   console.log(`the server is running successfully on port: ${PORT}`);
 });
