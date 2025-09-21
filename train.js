@@ -1,13 +1,32 @@
-console.log("Jeck Ma maslahatlari:");
+// A-TASK:
 
-const list = [
-  "yaxshi talaba bo'ling",
-  "to'g'ri boshliq tanlang va ko'p xato qiling",
-  "uzingizga ishlashingizni boshlang",
-  "siz kuchli bo'lgan narsalarni qiling",
-  "yoshlarga investitsiya qiling",
-  "endi dam oling, foydasi yuq",
-];
+// Shunday 2 parametrli function tuzing, hamda birinchi
+// parametrdagi letterni ikkinchi parametrdagi
+// sozdan qatnashga sonini
+// return qilishi kerak boladi.
+// MASALAN countLetter("e", "engineer") 3ni return qiladi.
+
+// masalani yechimi:
+
+let count = 0;
+const countLetter = (a, b) => {
+  for (let i = 0; i < b.length; i++) {
+    if (b[i] === a) count++;
+  }
+};
+countLetter("a", "Madina");
+console.log(count);
+
+// console.log("Jeck Ma maslahatlari:");
+
+// const list = [
+//   "yaxshi talaba bo'ling",
+//   "to'g'ri boshliq tanlang va ko'p xato qiling",
+//   "uzingizga ishlashingizni boshlang",
+//   "siz kuchli bo'lgan narsalarni qiling",
+//   "yoshlarga investitsiya qiling",
+//   "endi dam oling, foydasi yuq",
+// ];
 
 // async function // async then().catch() // async await
 // async function maslahatBering(a) {
