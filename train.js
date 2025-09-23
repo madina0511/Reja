@@ -82,3 +82,23 @@ console.log(count);
 //     console.log("javob: ", data);
 //   }
 // });
+
+// DEFINE
+function qoldiqliBolish(a, b, callback) {
+  if (b === 0) {
+    callback("Mahraj nolga teng emas!", null);
+  } else {
+    const c = a % b;
+    callback(null, c);
+  }
+}
+
+// CALL
+qoldiqliBolish(7, 5, (err, data) => {
+  if (err) {
+    console.log("ERROR:", err);
+  } else {
+    console.log("data:", data);
+    console.log("MANTIQLAR...");
+  }
+});
