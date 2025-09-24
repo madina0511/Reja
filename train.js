@@ -1,3 +1,21 @@
+// TASK B
+
+// Shunday, function tuzingki, bu function yagona parametrga ega bo'lib
+// string tarkibidagi sonlar miqdorini qaytarsin
+
+// Masalan: countDigits("ad2a54y79wet0sfgb9")
+// Yuqoridagi string tarkibida 7 dona raqam qatnashganligi uchun, natija 7 qaytadi
+let b = 0;
+function raqamHisoblagich(a) {
+  for (let i of a) {
+    if (i >= "0" && i <= "9") {
+      b++;
+    }
+  }
+  console.log(b);
+}
+raqamHisoblagich("ad2a54y79wet0sfgb9"); // 7
+
 // A-TASK:
 
 // Shunday 2 parametrli function tuzing, hamda birinchi
@@ -8,14 +26,14 @@
 
 // masalani yechimi:
 
-let count = 0;
-const countLetter = (a, b) => {
-  for (let i = 0; i < b.length; i++) {
-    if (b[i] === a) count++;
-  }
-};
-countLetter("a", "Madina");
-console.log(count);
+// let count = 0;
+// const countLetter = (a, b) => {
+//   for (let i = 0; i < b.length; i++) {
+//     if (b[i] == a) count++;
+//   }
+// };
+// countLetter("a", "madina");
+// console.log(count);
 
 // console.log("Jeck Ma maslahatlari:");
 
@@ -84,21 +102,21 @@ console.log(count);
 // });
 
 // DEFINE
-function qoldiqliBolish(a, b, callback) {
-  if (b === 0) {
-    callback("Mahraj nolga teng emas!", null);
-  } else {
-    const c = a % b;
-    callback(null, c);
-  }
-}
+// function qoldiqliBolish(a, b, callback) {
+//   if (b === 0) {
+//     callback("Mahraj nolga teng emas!", null);
+//   } else {
+//     const c = a % b;
+//     callback(null, c);
+//   }
+// }
 
-// CALL
-qoldiqliBolish(7, 5, (err, data) => {
-  if (err) {
-    console.log("ERROR:", err);
-  } else {
-    console.log("data:", data);
-    console.log("MANTIQLAR...");
-  }
-});
+// // CALL
+// qoldiqliBolish(7, 5, (err, data) => {
+//   if (err) {
+//     console.log("ERROR:", err);
+//   } else {
+//     console.log("data:", data);
+//     console.log("MANTIQLAR...");
+//   }
+// });
