@@ -16,7 +16,7 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 });
 
 // MONGODB chaqirish
-const db = require("./server").db();
+const db = require("./server").db(); // qalam
 
 // 1 KIRISH
 app.use(express.static("public")); // public papkamizni requistlarga ochib quyamiz
@@ -36,12 +36,15 @@ app.post("/create-item", (req, res) => {
   console.log("req: ", req.body);
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-    if (err) {
-      console.log(err);
-      res.end("something went wrong!");
-    } else {
-      res.end("successfully added.");
-    }
+    console.log(data.ops);
+    res.json(data.ops[0]);
+
+    // if (err) {
+    //   console.log(err);
+    //   res.end("something went wrong!");
+    // } else {
+    //   res.end("successfully added.");
+    // }
   });
 });
 
