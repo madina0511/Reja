@@ -19,7 +19,7 @@ shop.sotish("non", 3); & shop.qabul("cola", 4); & shop.qoldiq();
 Natija qaytishi kerak: Hozir 20:50da 1ta non, 5ta lag'mon va 6ta cola mavjud! */
 const { type } = require("express/lib/response");
 const moment = require("moment");
-const time = moment().format("HH:MM");
+
 class Shop {
   non;
   cola;
@@ -30,11 +30,9 @@ class Shop {
     this.lagmon = lagmon;
   }
   qoldiq() {
+    const time = moment().format("HH:mm");
     console.log(
-      "Hozir",
-      time,
-      "da",
-      `non: ${this.non}, cola: ${this.cola}, lagmon: ${this.lagmon} bor.`
+      `Hozir ${time}da non: ${this.non}, cola: ${this.cola}, lagmon: ${this.lagmon} ta bor.`
     );
   }
   sotish(mahsulot, son) {
@@ -74,8 +72,7 @@ class Shop {
 const shop = new Shop(4, 6, 7);
 shop.qoldiq();
 shop.sotish("non", 2);
-shop.sotish("lagmon", 2);
-shop.qabulQilish("non", 5);
+shop.qabulQilish("lagmon", 3);
 
 // TASK B
 
