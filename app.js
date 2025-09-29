@@ -17,6 +17,7 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 
 // MONGODB chaqirish
 const db = require("./server").db(); // qalam
+const mongodb = require("mongodb");
 
 // 1 KIRISH
 app.use(express.static("public")); // public papkamizni requistlarga ochib quyamiz
@@ -46,6 +47,17 @@ app.post("/create-item", (req, res) => {
     //   res.end("successfully added.");
     // }
   });
+});
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  console.log(id);
+  // res.end("done");
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    function (err, data) {
+      res.json({ state: "success" });
+    }
+  );
 });
 
 app.get("/author", (req, res) => {

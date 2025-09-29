@@ -1,3 +1,82 @@
+/*TASK-C
+
+Shop nomli class tuzing, va bu class 3 xill parametr qabul qilsin.
+Hamda classning quyidagdek 3'ta metodi bo'lsin:
+
+1) qoldiq
+2) sotish
+3) qabul
+
+Har bir metod ishga tushgan vaqtda log qilinsin
+
+MASALAN:
+const shop = new Shop(4, 5, 2)
+
+shop.qoldiq();
+natija qaytishi kerak: Hozir 20: 40'da 4'ta non, 5'ta lag'mon va 2'ta cola mavjud
+
+shop.sotish("non", 3); & shop.qabul("cola", 4); & shop.qoldiq();
+Natija qaytishi kerak: Hozir 20:50da 1ta non, 5ta lag'mon va 6ta cola mavjud! */
+const { type } = require("express/lib/response");
+const moment = require("moment");
+const time = moment().format("HH:MM");
+class Shop {
+  non;
+  cola;
+  lagmon;
+  constructor(non, cola, lagmon) {
+    this.non = non;
+    this.cola = cola;
+    this.lagmon = lagmon;
+  }
+  qoldiq() {
+    console.log(
+      "Hozir",
+      time,
+      "da",
+      `non: ${this.non}, cola: ${this.cola}, lagmon: ${this.lagmon} bor.`
+    );
+  }
+  sotish(mahsulot, son) {
+    let qolgan;
+    if (mahsulot === "non") {
+      this.non -= son;
+      qolgan = this.non;
+    } else if (mahsulot === "lagmon") {
+      this.lagmon -= son;
+      qolgan = this.lagmon;
+    } else if (mahsulot === "cola") {
+      this.cola -= son;
+      qolgan = this.cola;
+    }
+    console.log(`Sotilgan ${son} ta ${mahsulot}. Qolgan miqdor: ${qolgan}`);
+    this.qoldiq();
+  }
+  qabulQilish(mahsulot, son) {
+    let qolgan;
+    if (mahsulot === "non") {
+      this.non += son;
+      qolgan = this.non;
+    } else if (mahsulot === "lagmon") {
+      this.lagmon += son;
+      qolgan = this.lagmon;
+    } else if (mahsulot === "cola") {
+      this.cola += son;
+      qolgan = this.cola;
+    }
+    console.log(
+      `Qabul qilingan ${son} ta ${mahsulot}. Qolgan miqdor: ${qolgan}`
+    );
+    this.qoldiq();
+  }
+}
+
+const shop = new Shop(4, 6, 7);
+shop.qoldiq();
+shop.sotish("non", 2);
+shop.sotish("lagmon", 2);
+shop.qabulQilish("non", 5);
+
 // TASK B
 
 // Shunday, function tuzingki, bu function yagona parametrga ega bo'lib
@@ -5,16 +84,16 @@
 
 // Masalan: countDigits("ad2a54y79wet0sfgb9")
 // Yuqoridagi string tarkibida 7 dona raqam qatnashganligi uchun, natija 7 qaytadi
-let b = 0;
-function raqamHisoblagich(a) {
-  for (let i of a) {
-    if (i >= "0" && i <= "9") {
-      b++;
-    }
-  }
-  console.log(b);
-}
-raqamHisoblagich("ad2a54y79wet0sfgb9"); // 7
+// let b = 0;
+// function raqamHisoblagich(a) {
+//   for (let i of a) {
+//     if (i >= "0" && i <= "9") {
+//       b++;
+//     }
+//   }
+//   console.log(b);
+// }
+// raqamHisoblagich("ad2a54y79wet0sfgb9"); // 7
 
 // A-TASK:
 
