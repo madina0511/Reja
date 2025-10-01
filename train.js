@@ -1,3 +1,29 @@
+/*TASK D
+
+Ikkita parametra ega function tuzing, va functioning
+berilgan birinchi va ikkinchi parametr qiymatlari o'zaro to'liq
+mos kelsa true qiymat qaytarsin
+
+Masalan: checkContent("mitgroup", "gmtiprou");
+Yuqoridagi misolda birinchi va ikkinchi parametr qiymatli bir xil
+ya'ni bir xil harflar qatnashganligi uchun true qiymat qaytaradi.*/
+
+function checkContent(a, b) {
+  //
+  const arr1 = [...a];
+  const arr2 = [...b];
+
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+
+  const a1 = [...arr1].sort();
+  const b2 = [...arr2].sort();
+
+  return a1.every((val, i) => val === b2[i]);
+}
+const result = checkContent("hello", "olleh");
+console.log(result);
 /*TASK-C
 
 Shop nomli class tuzing, va bu class 3 xill parametr qabul qilsin.
@@ -70,9 +96,9 @@ class Shop {
 }
 
 const shop = new Shop(4, 6, 7);
-shop.qoldiq();
-shop.sotish("non", 2);
-shop.qabulQilish("lagmon", 3);
+// shop.qoldiq();
+// shop.sotish("non", 2);
+// shop.qabulQilish("lagmon", 3);
 
 // TASK B
 

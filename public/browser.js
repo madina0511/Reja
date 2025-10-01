@@ -1,3 +1,5 @@
+// const response = require("express/lib/response");
+
 console.log("FrontEnd js ishga tushdi.");
 
 function itemTemplate(item) {
@@ -29,7 +31,7 @@ document.getElementById("create-form").addEventListener("submit", (e) => {
         .getElementById("item-list")
         .insertAdjacentHTML("beforeend", itemTemplate(response.data));
       createField.value = "";
-      createField.value.focus();
+      createField.focus();
     })
     .catch((err) => {
       console.log("iltimos qaytadan harakat qiling", err);
@@ -53,6 +55,36 @@ document.addEventListener("click", (e) => {
   }
   // edit oper
   if (e.target.classList.contains("edit-me")) {
-    alert("siz edit tugmasini bosdingiz");
+    let userInput = prompt(
+      "siz edit tugmasini bosdingiz",
+      e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    );
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: e.target.getAttribute("data-id"),
+          new_input: userInput,
+        })
+        .then((response) => {
+          console.log(response.data);
+          e.target.parentElement.parentElement.querySelector(
+            ".item-text"
+          ).innerHTML = userInput;
+        })
+        .catch((err) => {
+          console.log("Iltimos qaytadan urinib ko'ring");
+        });
+    }
   }
+});
+document.getElementById("clean-all").addEventListener("click", () => {
+  axios
+    .post("/delete-all", { delete_all: true })
+    .then((response) => {
+      alert(response.data.state);
+      document.location.reload();
+    })
+    .catch((err) => {
+      console.log("yana bir bor urinib ko'ring");
+    });
 });
