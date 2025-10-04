@@ -1,3 +1,16 @@
+/*E-TASK: 
+
+Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"*/
+
+const getReverse = (a) => {
+  if (typeof a === "string") {
+    let aa = [...a].reverse().join(" ");
+
+    console.log(aa);
+  }
+};
+getReverse("hello");
 /*TASK D
 
 Ikkita parametra ega function tuzing, va functioning
@@ -23,7 +36,7 @@ function checkContent(a, b) {
   return a1.every((val, i) => val === b2[i]);
 }
 const result = checkContent("hello", "olleh");
-console.log(result);
+// console.log(result);
 /*TASK-C
 
 Shop nomli class tuzing, va bu class 3 xill parametr qabul qilsin.
