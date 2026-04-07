@@ -15,3 +15,6 @@ CMD ["node", "server.js"]
 #docker run -d -p 3005:4001 reja-image
 # docker ps    / container malumotlari
 # docker exec it con.id /bin/bash     docker terminaliga otish
+
+# compose === moongose
+#docker-compose up -d        compose ishga tushirish
